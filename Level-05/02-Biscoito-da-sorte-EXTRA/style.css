@@ -1,0 +1,143 @@
+/* resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* tipography  */
+h1 {
+  color: #34355b;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  color: #34355b;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* screen 1  */
+.screen1 {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+  padding: 48px 64px 64px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.screen1 img {
+cursor: pointer;
+}
+
+.screen1 img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+
+/* screen 2  */
+.screen2 {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+  padding: 48px 64px 64px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.screen2 h1 {
+  max-width: 300px;
+}
+
+.screen2 span {
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+  padding: 10px;
+
+  font-family: Dancing Script;
+  font-size: 24px;
+  max-width: 20ch;
+
+  animation: createBox .9s;
+}
+
+.screen2 img {
+  width: 300px;
+}
+
+.screen2 button {
+  padding: 16px;
+  border-radius: 4px;
+  background: #ff9500;
+  border: none;
+  font-family: DM Sans;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* HIDE  */
+.hide {
+  display: none;
+}
+
+/* CSS animation keyframes  */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
