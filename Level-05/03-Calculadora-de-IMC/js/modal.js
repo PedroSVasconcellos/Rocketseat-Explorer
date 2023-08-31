@@ -1,5 +1,3 @@
-
-
 //Object Literals - direcionando as variáveis e funções do Modal para organizar o código
 export const Modal = {
   txtPopUp: document.querySelector(".modal.card h2"),
@@ -16,15 +14,17 @@ export const Modal = {
   },
   close() {
     Modal.wrapper.classList.remove("open");
+    Modal.height.value = "";
+    Modal.weight.value = "";
   },
 };
 
 // events
-Modal.button.onclick = closeModal;
+Modal.button.onclick = Modal.close;
+window.addEventListener("keydown", handleCloseKeyboard);
 
-// functions 
-function closeModal() {
-  Modal.close();
-  Modal.height.value = "";
-  Modal.weight.value = "";
+function handleCloseKeyboard(event) {
+  if (event.key === `Escape`) {
+    Modal.close();
+  }
 }
